@@ -1,5 +1,5 @@
 .card {
-  width: 199px;
+  width: $card-width;
   height: 406px;
   display: flex;
   flex-direction: column;
@@ -72,7 +72,15 @@
   }
 }
 
-.main {
+.main .card:hover {
+  transform: scale(1.2);
+}
+
+.card:hover .card__title {
+  color: $color-card-title-hover;
+}
+
+.cards {
   display: grid;
   justify-content: center;
   gap: 48px 46px;
@@ -88,12 +96,5 @@
 
   @media (min-width: 1024px) {
     grid-template-columns: repeat(4, 200px);
-  }
-}
-
-.cards:hover {
-  transform: scale(1.2);
-  .card__title {
-    color: #34568b;
   }
 }
